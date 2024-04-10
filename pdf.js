@@ -1,8 +1,13 @@
     // Function to load and render PDF document
+
+
     function renderPdfWithPageNumbers(pdfUrl) {
         const loadingTask = pdfjsLib.getDocument(pdfUrl);
   
         loadingTask.promise.then(pdf => {
+
+            // Array to store rendered pages
+          const renderedPages = [];
           // Iterate through each page of the PDF
           for (let i = 1; i <= pdf.numPages; i++) {
             // Render the page
@@ -38,4 +43,6 @@
       }
   
       // Call the function to render PDF with page numbers
-      renderPdfWithPageNumbers('example.pdf');
+
+      const pdfSource = "/The Person and Work of Christ - B. B. Warfield.pdf"
+      renderPdfWithPageNumbers(pdfSource);
