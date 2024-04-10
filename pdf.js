@@ -31,6 +31,11 @@
                 context.font = '16px Arial';
                 context.fillStyle = 'black';
                 context.fillText(`Page ${i} of ${pdf.numPages}`, 10, 20);
+
+                // Store the rendered canvas in the array
+                renderedPages.push(canvas);
+                
+                
   
                 // Add the canvas to the document body or display it as needed
                 document.body.appendChild(canvas);
