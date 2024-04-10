@@ -30,7 +30,7 @@
                 // Add page number text to the canvas
                 context.font = '16px Arial';
                 context.fillStyle = 'black';
-                context.fillText(`Page ${i} of ${pdf.numPages}`, 10, 20);
+                context.fillText(`${i}/${pdf.numPages}`, -10, -20);
 
                 // Store the rendered canvas in the array
                 renderedPages.push(canvas);
